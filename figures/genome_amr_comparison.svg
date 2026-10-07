@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="686" height="859" viewBox="0 0 686 859">
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#172b4d}.title{font-size:20px;font-weight:700}
+.subtitle{font-size:12px;fill:#526579}.header{font-size:13px;font-weight:700}
+.label{font-size:12px}.class{font-size:10px;fill:#526579}.legend{font-size:11px}
+.cell-label{font-size:10px}.present{fill:#ffffff}.absent{fill:#778899}
+</style>
+<text x="24" y="32" class="title">AMR profile comparison: GCA_000633755.1 vs GCA_000694015.1</text>
+<text x="24" y="55" class="subtitle">AMR-typed AMRFinderPlus elements; cells indicate detected element symbols</text>
+<text x="24" y="78" class="subtitle">Shared: 14  |  GCA_000633755.1 only: 5  |  GCA_000694015.1 only: 6</text>
+<text x="365.0" y="101" text-anchor="middle" class="header">GCA_000633755.1</text>
+<text x="555.0" y="101" text-anchor="middle" class="header">GCA_000694015.1</text>
+<text x="24" y="128" class="label">aadA1</text><text x="258" y="128" text-anchor="end" class="class">AMINOGLYCOSIDE</text>
+<rect x="286" y="112" width="158" height="20" rx="4" fill="#edf1f5" stroke="#d2dae3"/><text x="365" y="126" text-anchor="middle" class="cell-label absent">not detected</text>
+<rect x="476" y="112" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="126" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="155" class="label">aadA2</text><text x="258" y="155" text-anchor="end" class="class">AMINOGLYCOSIDE</text>
+<rect x="286" y="139" width="158" height="20" rx="4" fill="#edf1f5" stroke="#d2dae3"/><text x="365" y="153" text-anchor="middle" class="cell-label absent">not detected</text>
+<rect x="476" y="139" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="153" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="182" class="label">aph(3&#x27;&#x27;)-Ib</text><text x="258" y="182" text-anchor="end" class="class">AMINOGLYCOSIDE</text>
+<rect x="286" y="166" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="180" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="166" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="180" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="209" class="label">aph(3&#x27;)-Ia</text><text x="258" y="209" text-anchor="end" class="class">AMINOGLYCOSIDE</text>
+<rect x="286" y="193" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="207" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="193" width="158" height="20" rx="4" fill="#edf1f5" stroke="#d2dae3"/><text x="555" y="207" text-anchor="middle" class="cell-label absent">not detected</text>
+<text x="24" y="236" class="label">aph(6)-Id</text><text x="258" y="236" text-anchor="end" class="class">AMINOGLYCOSIDE</text>
+<rect x="286" y="220" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="234" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="220" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="234" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="263" class="label">blaKPC-3</text><text x="258" y="263" text-anchor="end" class="class">BETA-LACTAM</text>
+<rect x="286" y="247" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="261" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="247" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="261" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="290" class="label">blaOXA-9</text><text x="258" y="290" text-anchor="end" class="class">BETA-LACTAM</text>
+<rect x="286" y="274" width="158" height="20" rx="4" fill="#edf1f5" stroke="#d2dae3"/><text x="365" y="288" text-anchor="middle" class="cell-label absent">not detected</text>
+<rect x="476" y="274" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="288" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="317" class="label">blaSHV</text><text x="258" y="317" text-anchor="end" class="class">BETA-LACTAM</text>
+<rect x="286" y="301" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="315" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="301" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="315" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="344" class="label">blaSHV-12</text><text x="258" y="344" text-anchor="end" class="class">BETA-LACTAM</text>
+<rect x="286" y="328" width="158" height="20" rx="4" fill="#edf1f5" stroke="#d2dae3"/><text x="365" y="342" text-anchor="middle" class="cell-label absent">not detected</text>
+<rect x="476" y="328" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="342" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="371" class="label">blaTEM</text><text x="258" y="371" text-anchor="end" class="class">BETA-LACTAM</text>
+<rect x="286" y="355" width="158" height="20" rx="4" fill="#edf1f5" stroke="#d2dae3"/><text x="365" y="369" text-anchor="middle" class="cell-label absent">not detected</text>
+<rect x="476" y="355" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="369" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="398" class="label">ompK35_E42RfsTer47</text><text x="258" y="398" text-anchor="end" class="class">BETA-LACTAM</text>
+<rect x="286" y="382" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="396" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="382" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="396" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="425" class="label">mgrB_G37S</text><text x="258" y="425" text-anchor="end" class="class">COLISTIN</text>
+<rect x="286" y="409" width="158" height="20" rx="4" fill="#edf1f5" stroke="#d2dae3"/><text x="365" y="423" text-anchor="middle" class="cell-label absent">not detected</text>
+<rect x="476" y="409" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="423" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="452" class="label">emrD</text><text x="258" y="452" text-anchor="end" class="class">EFFLUX</text>
+<rect x="286" y="436" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="450" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="436" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="450" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="479" class="label">fosA</text><text x="258" y="479" text-anchor="end" class="class">FOSFOMYCIN</text>
+<rect x="286" y="463" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="477" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="463" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="477" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="506" class="label">mph(A)</text><text x="258" y="506" text-anchor="end" class="class">MACROLIDE</text>
+<rect x="286" y="490" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="504" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="490" width="158" height="20" rx="4" fill="#edf1f5" stroke="#d2dae3"/><text x="555" y="504" text-anchor="middle" class="cell-label absent">not detected</text>
+<text x="24" y="533" class="label">mrx(A)</text><text x="258" y="533" text-anchor="end" class="class">MACROLIDE</text>
+<rect x="286" y="517" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="531" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="517" width="158" height="20" rx="4" fill="#edf1f5" stroke="#d2dae3"/><text x="555" y="531" text-anchor="middle" class="cell-label absent">not detected</text>
+<text x="24" y="560" class="label">oqxA</text><text x="258" y="560" text-anchor="end" class="class">NITROFURAN/PHENICOL/QUINOLONE/TETRACYCLINE</text>
+<rect x="286" y="544" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="558" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="544" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="558" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="587" class="label">oqxB</text><text x="258" y="587" text-anchor="end" class="class">NITROFURAN/PHENICOL/QUINOLONE/TETRACYCLINE</text>
+<rect x="286" y="571" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="585" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="571" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="585" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="614" class="label">catA1</text><text x="258" y="614" text-anchor="end" class="class">PHENICOL</text>
+<rect x="286" y="598" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="612" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="598" width="158" height="20" rx="4" fill="#edf1f5" stroke="#d2dae3"/><text x="555" y="612" text-anchor="middle" class="cell-label absent">not detected</text>
+<text x="24" y="641" class="label">gyrA_S83I</text><text x="258" y="641" text-anchor="end" class="class">QUINOLONE</text>
+<rect x="286" y="625" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="639" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="625" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="639" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="668" class="label">parC_S80I</text><text x="258" y="668" text-anchor="end" class="class">QUINOLONE</text>
+<rect x="286" y="652" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="666" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="652" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="666" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="695" class="label">sul1</text><text x="258" y="695" text-anchor="end" class="class">SULFONAMIDE</text>
+<rect x="286" y="679" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="693" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="679" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="693" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="722" class="label">sul2</text><text x="258" y="722" text-anchor="end" class="class">SULFONAMIDE</text>
+<rect x="286" y="706" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="720" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="706" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="720" text-anchor="middle" class="cell-label present">present</text>
+<text x="24" y="749" class="label">dfrA12</text><text x="258" y="749" text-anchor="end" class="class">TRIMETHOPRIM</text>
+<rect x="286" y="733" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="747" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="733" width="158" height="20" rx="4" fill="#edf1f5" stroke="#d2dae3"/><text x="555" y="747" text-anchor="middle" class="cell-label absent">not detected</text>
+<text x="24" y="776" class="label">dfrA14</text><text x="258" y="776" text-anchor="end" class="class">TRIMETHOPRIM</text>
+<rect x="286" y="760" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="365" y="774" text-anchor="middle" class="cell-label present">present</text>
+<rect x="476" y="760" width="158" height="20" rx="4" fill="#168a72" stroke="#11705d"/><text x="555" y="774" text-anchor="middle" class="cell-label present">present</text>
+<rect x="24" y="801" width="14" height="14" rx="3" fill="#168a72"/>
+<text x="44" y="813" class="legend">Detected</text>
+<rect x="120" y="801" width="14" height="14" rx="3" fill="#edf1f5" stroke="#d2dae3"/>
+<text x="140" y="813" class="legend">Not detected</text>
+</svg>

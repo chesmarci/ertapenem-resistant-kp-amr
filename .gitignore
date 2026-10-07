@@ -1,0 +1,13 @@
+.DS_Store
+.vscode/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Public source data and generated analysis tables are referenced, not redistributed.
+/data/*
+!/data/README.md
+/results/*
+!/results/README.md
+/combined_amr.tsv

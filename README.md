@@ -18,9 +18,9 @@ Genome assemblies are retrieved from NCBI Datasets. Dataset files, assembly
 downloads, and intermediate sequence-analysis files are excluded from Git;
 source details and accession links are listed in [data/README.md](data/README.md).
 
-The current merged AMRFinder results cover three genomes. The source workspace
-mentions a larger pilot subset, but only these three genomes have per-genome
-AMRFinder outputs in the merged results used for the figures.
+The existing merged AMRFinder results cover an earlier three-genome subset.
+The additional phenotype-matched cohort is processed separately so that
+earlier results remain intact.
 
 ## Methods
 
@@ -37,9 +37,9 @@ with exact paired ertapenem-resistant/imipenem-susceptible calls; this is a
 subset defined by phenotype annotations and assembly availability, not a claim
 that all records across the contributing databases have been included.
 
-To expand the WGS cohort to public *K. pneumoniae* isolates with paired
-ertapenem-resistant and imipenem-susceptible phenotypes, first obtain the local
-public composite phenotype parquet, then run:
+To identify public *K. pneumoniae* isolates with paired ertapenem-resistant
+and imipenem-susceptible phenotypes and retrieve their assembly FASTAs, obtain
+the local public composite phenotype parquet, then run:
 
 ```bash
 python3 scripts/fetch_ertapenem_R_imipenem_S_genomes.py
@@ -48,10 +48,36 @@ python3 scripts/fetch_ertapenem_R_imipenem_S_genomes.py
 This creates a local matched-phenotype manifest and downloads the matching
 NCBI assembly FASTAs. Details and limitations are in [data/README.md](data/README.md).
 
+Run AMRFinderPlus on every downloaded assembly and regenerate cohort-specific
+merged results and a carbapenemase heatmap with:
+
+```bash
+conda create -n kp-amr-processing -c conda-forge -c bioconda \
+  python=3.12 ncbi-amrfinderplus=4.2.7
+conda run -n kp-amr-processing python -m pip install -r requirements.txt
+conda run -n kp-amr-processing amrfinder_update --database data/local_amrfinder_db
+bash scripts/process_ertapenem_R_imipenem_S.sh
+```
+
+If `kp-amr-processing` already exists, add Python and pip to it instead of
+recreating it:
+
+```bash
+conda install -n kp-amr-processing -c conda-forge python=3.12 pip
+conda run -n kp-amr-processing python -m pip install -r requirements.txt
+```
+
+The pipeline checks that every manifest accession has a FASTA, resumes valid
+per-genome AMRFinder output files after interruption, merges the results, and
+generates the summary and heatmap. Set `THREADS=8` before the command to adjust
+CPU use; set `AMRFINDER_ENV` if your Conda environment has another name. Pass
+`--force` to `scripts/run_amrfinder_cohort.py` to rerun existing outputs; for
+example, run `conda run -n kp-amr-processing python scripts/run_amrfinder_cohort.py --force`.
+When running the Python script outside that Conda environment, pass the
+AMRFinderPlus executable explicitly with `--amrfinder /path/to/amrfinder`.
+
 ## Tools
 
-- NCBI Datasets CLI
-- AMRFinderPlus v4.2.7 (database 2026-08-07.1)
 - Python 3
 - AMRFinderPlus v4.2.7 (database 2026-08-07.1)
 - scikit-learn (`MultiLabelBinarizer`) and Matplotlib

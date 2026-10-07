@@ -7,12 +7,15 @@ analysis files. Those files are excluded from Git by the repository-level
 
 ## Phenotype cohort
 
-The project provenance identifies the phenotype data as the public CABBAGE
-database accessed through the EMBL-EBI antimicrobial-resistance portal. Retrieve
-the current public data from its source and record the dataset release/version,
-download date, and filtering steps when reproducing the analysis. The source
-workspace did not retain a stable release identifier or a direct download URL,
-so no specific snapshot is claimed here.
+The local `phenotype.parquet` input is a public, composite antimicrobial
+phenotype export. Its `database` provenance field contains sources including
+NCBI antibiogram, NDARO, PATRIC, CDC, and CABBAGE PubMed records. The public
+[NCBI Pathogen Detection portal](https://www.ncbi.nlm.nih.gov/pathogens/)
+describes the pathogen-genomics and AMR surveillance resource. This repository
+does not include the phenotype export; obtain the public records from their
+source portal and retain the export's release/version and download date. The
+original workspace did not preserve a stable URL or snapshot identifier for
+its parquet file, so this repository does not claim a particular release.
 
 ## Genome assemblies
 
@@ -41,3 +44,27 @@ python3 scripts/compare_genomes.py
 
 All source files and generated result tables in these directories remain local
 and are not tracked by Git.
+
+## Expanding the paired phenotype cohort
+
+If a local copy of the public CABBAGE phenotype parquet is available at
+`data/raw/phenotype.parquet`, discover *K. pneumoniae* records with exact AST
+labels `ertapenem = resistant` and `imipenem = susceptible` (imipenem-relebactam
+is not included) and download assemblies with:
+
+```bash
+python3 -m pip install -r requirements.txt
+python3 scripts/fetch_ertapenem_R_imipenem_S_genomes.py
+```
+
+The script writes the matched AST rows to
+`data/processed/ertapenem_R_imipenem_S/phenotype_pairs.tsv` and retrieves
+genome FASTAs from the NCBI Datasets API into the same ignored local directory.
+It includes only records with a valid NCBI assembly accession in the download.
+Records with no assembly accession remain visible in the manifest but cannot
+be downloaded as assemblies. In the source snapshot available in the original workspace, this yielded 32
+paired AST/provenance rows, 25 rows with an assembly accession, and 21 distinct
+genome assemblies. Seven pairs without assembly accessions are listed in the
+phenotype manifest; assemblies were not reconstructed from their SRA runs. AST
+source labels, MIC values, and standards are preserved as supplied in the
+manifest and are not harmonized by the script. Outputs are not committed to Git.

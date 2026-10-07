@@ -12,12 +12,11 @@ accession links.
 
 ## Data source
 
-The project provenance identifies the phenotype source as the CABBAGE database
-accessed through the EMBL-EBI antimicrobial-resistance portal. Genome assemblies
-were retrieved from NCBI Datasets. Dataset files, assembly downloads, and
-intermediate sequence-analysis files are excluded from Git; source details and
-the three accessions present in the current AMRFinder result table are listed
-in [data/README.md](data/README.md).
+The local phenotype export is a public composite table whose provenance
+includes NCBI antibiogram, NDARO, PATRIC, CDC, and CABBAGE PubMed records.
+Genome assemblies are retrieved from NCBI Datasets. Dataset files, assembly
+downloads, and intermediate sequence-analysis files are excluded from Git;
+source details and accession links are listed in [data/README.md](data/README.md).
 
 The current merged AMRFinder results cover three genomes. The source workspace
 mentions a larger pilot subset, but only these three genomes have per-genome
@@ -32,6 +31,22 @@ AMRFinder outputs in the merged results used for the figures.
 4. Place per-genome AMRFinder TSV outputs in `results/amrfinder/` and merge
    them with `scripts/generate_amr_results.py`.
 5. Generate the heatmaps with the scripts below.
+
+The source snapshot available locally yielded 21 distinct assembly accessions
+with exact paired ertapenem-resistant/imipenem-susceptible calls; this is a
+subset defined by phenotype annotations and assembly availability, not a claim
+that all records across the contributing databases have been included.
+
+To expand the WGS cohort to public *K. pneumoniae* isolates with paired
+ertapenem-resistant and imipenem-susceptible phenotypes, first obtain the local
+public composite phenotype parquet, then run:
+
+```bash
+python3 scripts/fetch_ertapenem_R_imipenem_S_genomes.py
+```
+
+This creates a local matched-phenotype manifest and downloads the matching
+NCBI assembly FASTAs. Details and limitations are in [data/README.md](data/README.md).
 
 ## Tools
 
